@@ -19,9 +19,9 @@
 \usepackage{multicol}
 \usepackage{minted}
 \usepackage{fontspec}
-\setmonofont{JetBrains Mono} % Fira Mono, Intel One Mono, IBM Plex Mono https://hackingcpp.com/dev/coding_fonts.html
-\usefonttheme[onlymath]{serif}
-
+\usepackage{array}
+\usepackage[linesnumbered,ruled,boxed,vlined,spanish]{algorithm2e}
+\usepackage{algorithmicx}
 \usepackage[
 	citestyle=numeric,
 	backend=biber,
@@ -30,6 +30,7 @@
 ]{biblatex}
 \addbibresource{references.bib}
 
+\setmonofont{JetBrains Mono} % Fira Mono, Intel One Mono, IBM Plex Mono https://hackingcpp.com/dev/coding_fonts.html
 % Habilita el tipo de letra matemático con serifas
 \usefonttheme[onlymath]{serif}
 % Quita los símbolos de navegación
@@ -81,3 +82,5 @@
 % https://tex.stackexchange.com/questions/706675/no-numbering-solution-environment-when-ams-style-is-enabled-beamer
 \setbeamerfont{block title}{series=\bfseries}
 \renewenvironment<>{solution}{\begin{block}#1{\translate{Solution}}\itshape}{\end{block}}
+
+\newcolumntype{x}[1]{>{\centering\arraybackslash\hspace{0pt}}p{#1}}

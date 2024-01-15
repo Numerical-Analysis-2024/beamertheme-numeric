@@ -262,16 +262,48 @@
 
                 \
 
-                \inputminted[fontsize=\tiny,firstline=8,lastline=10]{python}{questions/p5.py}
+                \inputminted[fontsize=\tiny,firstline=8,lastline=12]{python}{questions/p5.py}
 
             \end{column}
             \begin{column}{0.48\textwidth}
-                \inputminted[fontsize=\tiny,firstline=12,lastline=16]{python}{questions/p5.py}
-
-                \
-
-                \inputminted[fontsize=\tiny,firstline=18,lastline=22]{python}{questions/p5.py}
+                \inputminted[fontsize=\tiny,firstline=14,lastline=18]{python}{questions/p5.py}
             \end{column}
         \end{columns}
+    \end{solution}
+\end{frame}
+
+\begin{frame}
+    \begin{solution}
+        \begin{algorithm}[H]
+            $A\leftarrow 1.0$\;
+            $B\leftarrow 1.0$\;
+            $p\leftarrow 0$\;
+            \Mientras{\normalfont $\left(\left(A+1\right)-A\right)-1=0$}{
+                $A\leftarrow 2\ast A$\;
+                $p\leftarrow p+1$\;
+                \Mientras{\normalfont $\left(\left(A+B\right)-A\right)-B\neq0$}{
+                    $B\leftarrow B+1$\;
+                }
+            }
+        \end{algorithm}
+    \end{solution}
+\end{frame}
+
+\begin{frame}
+    \begin{solution}
+        Sea la longitud de palabra de $N=4$ bits, genere una tabla que muestre la representación decimal de los números $+7,+6,+5,+4,+3,+2,+1,+0,-0,-1,-2,-3,-4,-5,-6,-7$ y $-8$ en la representación de su signo-magnitud y complemento a dos.
+        Es decir,
+
+        \
+
+        \begin{table}[ht!]
+            \centering
+            \begin{tabular}{|x{2.5cm}|x{2.5cm}|x{3.1cm}|}
+                \hline
+                Representación decimal & Representación signo-magnitud & Representación complemento a dos \\
+                \hline$+7$             & $0111$                        & $0111$                           \\
+                \hline
+            \end{tabular}
+        \end{table}
     \end{solution}
 \end{frame}

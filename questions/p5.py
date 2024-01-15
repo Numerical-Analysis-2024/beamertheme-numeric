@@ -5,10 +5,6 @@ import numpy as np
 from tabulate import tabulate
 import pandas as pd
 
-plt.rcParams["text.usetex"] = True
-plt.rcParams["text.latex.preamble"] = r"\usepackage{mathtools}"
-plt.rcParams["font.serif"] = ["Computer Modern"]
-
 n = np.arange(start=1, stop=5e2)  # step=1e2
 a_n = np.array((n + 3) / (n + 7))
 df = pd.DataFrame({"a_n": a_n})
