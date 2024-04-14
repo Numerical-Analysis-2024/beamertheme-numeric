@@ -32,16 +32,16 @@ jobs:
           shell: bash
           run: |
             sudo chown -R gitpod:gitpod /work
-            cd /work && arara main
+            cd /work && arara main && mkdir -p pdf && mv main.pdf pdf
 
       - name: Check pdf files
         run: |
-          find . -type f -name "main.pdf" -exec file -- {} + | grep -q ' PDF '
+          find pdf -type f -name "main.pdf" -exec file -- {} + | grep -q ' PDF '
 
       - name: "Tar files"
         run: |
           sudo chown runner:docker -R .
-          tar --zstd -cf PDF.tar.zst main.pdf
+          tar --zstd -cf PDF.tar.zst pdf/main.pdf
 
       - uses: actions/upload-artifact@v4
         with:

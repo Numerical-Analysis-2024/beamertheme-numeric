@@ -17,13 +17,12 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: latex.yml
           name: PDF-artifact
-          search_artifacts: true
 
       - name: "Untar files"
         run: |
           tar -I zstd -xvf PDF.tar.zst
-          mkdir -p public
-          mv main.pdf public
+          mkdir public
+          mv pdf/main.pdf public/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
