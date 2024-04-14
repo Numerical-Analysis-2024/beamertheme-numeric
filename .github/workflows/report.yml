@@ -22,7 +22,7 @@ jobs:
         run: |
           tar -I zstd -xvf PDF.tar.zst
           mkdir -p public
-          mv main.pdf public/
+          mv main.pdf public
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
