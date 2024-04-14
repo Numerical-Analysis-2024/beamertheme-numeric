@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Download artifact
-        uses: dawidd6/action-download-artifact@v3
+      - uses: dawidd6/action-download-artifact@v3
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: latex.yml
