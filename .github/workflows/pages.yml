@@ -17,6 +17,7 @@ jobs:
           github_token: ${{secrets.GITHUB_TOKEN}}
           workflow: latex.yml
           name: PDF-artifact
+          search_artifacts: true
 
       - name: "Untar files"
         run: |
