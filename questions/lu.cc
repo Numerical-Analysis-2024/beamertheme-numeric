@@ -6,11 +6,10 @@ using MatrixType = typename std::vector<std::vector<double>>;
 
 int main()
 {
-  MatrixType A{
-      {2.0, 1.0, 1.0, 0.0},
-      {4.0, 3.0, 3.0, 1.0},
-      {8.0, 7.0, 9.0, 5.0},
-      {6.0, 7.0, 9.0, 8.0}};
+  MatrixType A{{2.0, 1.0, 1.0, 0.0},
+               {4.0, 3.0, 3.0, 1.0},
+               {8.0, 7.0, 9.0, 5.0},
+               {6.0, 7.0, 9.0, 8.0}};
   numeric::print(A, "Matrix A");
 
   auto LU = numeric::doolittle(A);
