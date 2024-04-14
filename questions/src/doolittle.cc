@@ -8,13 +8,13 @@ namespace numeric
 {
   std::tuple<MatrixType, MatrixType> doolittle(const MatrixType &A)
   {
-    int n = A.size();
-    MatrixType L(n, Vector_type(n, 0)); // Matriz cero
-    MatrixType U(n, Vector_type(n, 0)); // Matriz cero
+    const int n = A.size();
+    MatrixType L(n, Vector_type(n, 0)); // Zero matrix
+    MatrixType U(n, Vector_type(n, 0)); // Zero matrix
 
     for (std::size_t k = 0; k < n; k++)
     {
-      L[k][k] = 1; // Matriz identidad
+      L[k][k] = 1; // Identity matrix
       for (std::size_t j = k; j < n; j++)
       {
         Real_type sum = 0;
