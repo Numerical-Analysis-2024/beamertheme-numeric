@@ -21,7 +21,7 @@ std::tuple<MatrixType, MatrixType> doolittle(const MatrixType &A)
       U[k][j] = A[k][j] - sum;
     }
 
-    for (int j = k + 1; j < n; j++) {
+    for (std::size_t j = k + 1; j < n; j++) {
       Real_type sum = 0;
       for (std::size_t s = 0; s < k; s++)
         sum += L[j][s] * U[s][k];
