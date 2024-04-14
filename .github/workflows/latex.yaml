@@ -36,7 +36,7 @@ jobs:
 
       - name: Check pdf files
         run: |
-          find pdf -type f -name "*.pdf" -exec file -- {} + | grep -q ' PDF '
+          find . -type f -name "main.pdf" -exec file -- {} + | grep -q ' PDF '
 
       - name: "Tar files"
         run: |
